@@ -56,3 +56,15 @@ function copyUrl () {
     document.execCommand("copy");
     alert("jancok")
 }
+
+let receiverValue = document.getElementsByClassName('receiverName')[0]; 
+// jika class receiverData ada (mencegah errior)
+if(receiverValue){
+    receiverValue.innerHTML = receiverUrl;
+
+    let messageValue = document.getElementsByClassName('receiverMessage')[0];
+    messageValue.innerHTML = messageUrl;
+    
+    let senderValue = document.getElementsByClassName('receiverSend')[0];
+    senderValue.innerHTML = senderUrl;
+}
