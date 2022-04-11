@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+@font-face {
+  font-family: "ramadan";
+  src: url(".../font/RamadhanAmazing-jEnDv.ttf");
+}
+
+@font-face {
+  font-family: "rabiul";
+  src: url("../font/RabiulFreeTrial-axgLJ.otf");
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("../font/Poppins-Regular.otf");
+}
+
+@font-face {
+  font-family: "ceria";
+  src: url("../font/CeriaLebaran.otf");
+}
+
+@font-face {
+  font-family: "merienda";
+  src: url("../font/Merienda-Regular.ttf");
+}
+
+body {
+  padding: 5px;
+}
+
+.greeting {
+  margin-top: 45px;
+}
+
+.container {
+  height: 550px;
+  background-image: url("../img/bg12.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.container .happy {
+  color: wheat;
+  font-family: "ramadan", "Times New Roman", Times, serif;
+  font-size: 70px;
+}
+
+.container .tahun {
+  color: wheat;
+  font-family: "rabiul", "Times New Roman", Times, serif;
+  font-size: 25px;
+  margin-top: -20px;
+}
+
+.container .untuk {
+  color: wheat;
+  font-family: "poppins", "Times New Roman", Times, serif;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+.container .receiverName {
+  color: wheat;
+  font-family: "merienda", "Times New Roman", Times, serif;
+  font-size: 30px;
+  margin-top: -10px;
+}
+
+.container .pesan {
+  color: wheat;
+  font-family: "poppins", "Times New Roman", Times, serif;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.container .receiverMessage {
+  color: white;
+  height: 200px;
+  padding: 5px 40px;
+  overflow-x: auto;
+  font-weight: 500;
+}
+
+.container .dari {
+  color: wheat;
+  font-family: "poppins", "Times New Roman", Times, serif;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+.container .receiverSend {
+  color: wheat;
+  font-family: "poppins", "Times New Roman", Times, serif;
+  margin-top: -10px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media screen and (max-width: 576px) {
+  .greeting {
+    margin-top: 0px;
+  }
+
+  .container {
+    height: 650px;
+  }
+
+  .container .happy {
+    font-size: 60px;
+  }
+
+  .container .isi-pesan {
+    padding: 0px;
+  }
+
+  .container .penerima {
+    font-size: 25px;
+  }
+}
