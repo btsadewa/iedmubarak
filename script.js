@@ -5,10 +5,6 @@ let messageUrl = getDataUrl.get("Psn");
 let senderUrl = getDataUrl.get("Png");
 let copy = document.getElementById("copy");
 
-copy.addEventListener("click", function () {
-  alert("cok");
-});
-
 let receiverValue = document.getElementsByClassName("receiverName")[0];
 
 if (receiverValue) {
