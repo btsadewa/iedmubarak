@@ -48,7 +48,7 @@ if (document.getElementsByClassName("salin")[0]) {
 
 function baseUrl() {
   let urlBase = document.getElementById("baseUrl");
-  urlBase.value = "https://btsadewa.github.io/iedmubarak/" + getDataLink;
+  urlBase.value = "https://btsadewa.github.io/iedmubarak/bismillah/index.html" + getDataLink;
   copyUrl();
 }
 
