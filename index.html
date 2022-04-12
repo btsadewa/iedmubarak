@@ -1,65 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style2.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style2.css" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
     <title>Hello, world!</title>
   </head>
   <body>
-
     <section id="control">
-        <div class="row justify-content-center text-center">
-            <div class="col-8">
-                <h1>Kartu Ucapan Eid Mubarak 1430 Hijriah</h1>
-                <div class="container">
-                    <!--input -->
-                    <form class="form" action="bismillah/index.html">
-                        <!-- receiver -->
-                        <label for="Kpd">Kepada : </label>
-                        <br>
-                        <input type="text" name="Kpd" id="Kpd" class="col-lg-7 col-md-9 col-sm-12 mt-2" required>
-                        <br>
-                        <!-- message -->
-                        <label for="Psn" class=" mt-2">Pesan : </label>
-                        <br>
-                        <textarea name="Psn" id="Psn" class="col-lg-7 col-md-9 col-sm-12  mt-2"></textarea required>
-                        <br>
-                        <!-- sender -->
-                        <label for="Png" class=" mt-2">Pengirim : </label>
-                        <br>
-                        <input type="text" name="Png" id="Png" class="col-lg-7 col-md-9 col-sm-12  mt-2" required>
-                        <br>
-                        <!-- submit -->
-                        <button type="submit" id="submit" class="submit  mt-3">Lihat Hasil</button>
-                        <!-- copy -->
-                        <p class="copy mt-2">Tekan Tombol Dibawah Untuk Mendapatkan Link</p>
-                        <!-- url -->
-                        <input type="text" name="baseUrl" id="baseUrl" class="col-lg-7 col-md-9 col-sm-12 hidden">
-                        <!-- <a class="copy">Salin Link</a> -->
-                    </form>
+      <div class="row justify-content-center text-center">
+        <div class="col-8">
+          <h1>Kartu Ucapan Eid Mubarak 1430 Hijriah</h1>
+          <div class="container">
+            <!--input -->
+            <form class="form" action="bismillah/index.html">
+              <!-- receiver -->
+              <label for="Kpd">Kepada : </label>
+              <br />
+              <input type="text" name="Kpd" id="Kpd" class="col-8" required />
+              <br />
+              <!-- message -->
+              <label for="Psn" class="mt-2">Pesan : </label>
+              <br />
+              <textarea name="Psn" id="Psn" class="col-8"></textarea>
+              <br />
+              <!-- sender -->
+              <label for="Png" class="mt-2">Pengirim : </label>
+              <br />
+              <input type="text" name="Png" id="Png" class="col-8" required />
+              <br />
+              <!-- submit -->
+              <button type="submit" id="submit" class="submit mt-3">Lihat Hasil</button>
+              <!-- copy -->
+              <p class="copy mt-2">Tekan Tombol Dibawah Untuk Mendapatkan Link</p>
+              <!-- url -->
+              <input type="text" name="baseUrl" id="baseUrl" class="col-8" />
+              <!-- <a class="copy">Salin Link</a> -->
+            </form>
 
-                    <form class="form2" action="index.html">
-                      <!-- receiver -->
-                      <input type="text" name="Kpd" class="receiverCopy hidden" style="border: 2px solid red;">
-                      <!-- message -->
-                      <input type="text" name="Psn" class="messageCopy hidden"  style="border: 2px solid red;" >
-                      <!-- sender -->
-                      <input type="text" name="Png" class="senderCopy hidden"  style="border: 2px solid red;" >
-                      <!-- submit -->
-                      <button type="submit" id="copy" class="copy">Buat Link</button>
-                  </form>
-                </div>  
-            </div>
+            <form class="form2" action="index.html">
+              <!-- receiver -->
+              <input type="text" name="Kpd" class="receiverCopy hidden" style="border: 2px solid red" />
+              <!-- message -->
+              <input type="text" name="Psn" class="messageCopy hidden" style="border: 2px solid red" />
+              <!-- sender -->
+              <input type="text" name="Png" class="senderCopy hidden" style="border: 2px solid red" />
+              <!-- submit -->
+              <button type="submit" id="copy" class="copy">Buat Link</button>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
-   
-   
+
     <!-- footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="script.js"></script>
