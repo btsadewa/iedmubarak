@@ -82,14 +82,14 @@ function copyUrl() {
 }
 
 // output
-let receiverValue = document.getElementsByClassName("receiverData")[0];
+let receiverValue = document.getElementsByClassName("receiverName")[0];
 // jika class receiverData ada (mencegah errior)
 if (receiverValue) {
   receiverValue.innerHTML = receiverUrl;
 
-  let messageValue = document.getElementsByClassName("messageData")[0];
+  let messageValue = document.getElementsByClassName("receiverMessage")[0];
   messageValue.innerHTML = messageUrl;
 
-  let senderValue = document.getElementsByClassName("senderData")[0];
+  let senderValue = document.getElementsByClassName("receiverSend")[0];
   senderValue.innerHTML = senderUrl;
 }
