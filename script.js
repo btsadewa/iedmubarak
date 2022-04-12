@@ -1,34 +1,46 @@
-let allDataLink = window.location.search;
-let getDataLink = new URLSearchParams(allDataLink);
-let receiverUrl = getDataLink.get("Kpd");
-let messageUrl = getDataLink.get("Psn");
-let senderUrl = getDataLink.get("Png");
+// get value from input sender
+let allDataUrl = window.location.search;
+let getDataUrl = new URLSearchParams(allDataUrl);
+let receiverUrl = getDataUrl.get("Kpd");
+let messageUrl = getDataUrl.get("Psn");
+let senderUrl = getDataUrl.get("Png");
 let copy = document.getElementsByClassName("copy")[1];
-let baseUrl = document.getElementById("baseUrl");
+let make = document.getElementsByClassName("salin")[0];
 
+console.log(allDataUrl);
+
+// make url
 if (copy) {
   copy.addEventListener("click", function () {
+    copy.classList.remove("salin");
     copyData();
   });
 }
 
+// 1.1
 function copyData() {
-  let receiverCopy = document.querySelector(".reveiverCopy");
-  let messageCopy = document.querySelector(".messageCopy");
-  let senderCopy = document.querySelector(".senderCopy");
-  //ambil data dari deklarasi diatas
-  receiverCopy.value = document.querySelector("#Kpd").value;
-  messageCopy.value = document.querySelector("#Psn").value;
-  senderCopy.value = document.querySelector("#Png").value;
-
+  let receiverCopy = document.getElementsByClassName("receiverCopy")[0];
+  let messageCopy = document.getElementsByClassName("messageCopy")[0];
+  let senderCopy = document.getElementsByClassName("senderCopy")[0];
+  // get data from main form
+  receiverCopy.value = document.getElementById("HJkaL").value;
+  messageCopy.value = document.getElementById("MGJiK").value;
+  senderCopy.value = document.getElementById("LpOUI").value;
+  // if
   let make = document.getElementsByClassName("salin")[0];
   if (make) {
     baseUrl();
   }
 }
 
-copy.addEventListener("click", copyData);
+// default
+if (receiverUrl === null && senderUrl === null) {
+  if (messageUrl === null) {
+    copy.classList.remove("salin");
+  }
+}
 
+// make url
 if (receiverUrl || senderUrl) {
   if (messageUrl) {
     // back page
@@ -39,6 +51,7 @@ if (receiverUrl || senderUrl) {
   }
 }
 
+// copy url
 if (document.getElementsByClassName("salin")[0]) {
   let make = document.getElementsByClassName("salin")[0];
   make.addEventListener("click", function () {
@@ -46,27 +59,37 @@ if (document.getElementsByClassName("salin")[0]) {
   });
 }
 
+// 2.1s
 function baseUrl() {
   let urlBase = document.getElementById("baseUrl");
-  urlBase.value = "https://btsadewa.github.io/iedmubarak/bismillah/index.html" + getDataLink;
+  urlBase.value = "https://adisan103.github.io/disanjaya/projeck/valentineDayCard/xatemp.html?" + getDataUrl;
   copyUrl();
 }
-
+// 2.2
 function copyUrl() {
+  copy.classList.add("back");
   let urlBase = document.getElementById("baseUrl");
   urlBase.select();
   document.execCommand("copy");
-  alert("jancok");
+  alert("link berhasil dicopy");
+  // let receiverCopy = document.getElementsByClassName('receiverCopy')[0];
+  // let messageCopy = document.getElementsByClassName('messageCopy')[0];
+  // let senderCopy = document.getElementsByClassName('senderCopy')[0];
+  // // post data to url
+  // receiverCopy.value = 'false';
+  // messageCopy.value = 'false';
+  // senderCopy.value = 'false';
 }
 
-let receiverValue = document.getElementsByClassName("receiverName")[0];
+// output
+let receiverValue = document.getElementsByClassName("receiverData")[0];
 // jika class receiverData ada (mencegah errior)
 if (receiverValue) {
   receiverValue.innerHTML = receiverUrl;
 
-  let messageValue = document.getElementsByClassName("receiverMessage")[0];
+  let messageValue = document.getElementsByClassName("messageData")[0];
   messageValue.innerHTML = messageUrl;
 
-  let senderValue = document.getElementsByClassName("receiverSend")[0];
+  let senderValue = document.getElementsByClassName("senderData")[0];
   senderValue.innerHTML = senderUrl;
 }
