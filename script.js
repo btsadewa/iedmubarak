@@ -18,7 +18,7 @@ if (receiverUrl || senderUrl) {
     // back page
     if (copy) {
       copy.innerHTML = "Salin link";
-      copy.classList.add("salin");
+      copy.classList.add("read");
     }
   }
 }
@@ -33,6 +33,13 @@ function makeURL() {
   senderCopy.value = document.getElementById("Png").value;
 }
 
+if (document.getElementsByClassName("read")[0]) {
+  let make = document.getElementsByClassName("read")[0];
+  make.addEventListener("click", function () {
+    generateURL();
+  });
+}
+
 function generateURL() {
   let baseUrl = document.getElementById("baseUrl");
   baseUrl.value = "https://btsadewa.github.io/iedmubarak/bismillah/index.html?" + getDataUrl;
@@ -43,9 +50,9 @@ function salin() {
   let baseUrl = document.getElementById("baseUrl");
   baseUrl.select();
   document.execCommand("copy");
+  alert("succes");
 }
-copy.addEventListener("click", makeURL);
-copy.addEventListener("click", generateURL);
+// copy.addEventListener("click", generateURL);
 
 let receiverValue = document.getElementsByClassName("receiverName")[0];
 if (receiverValue) {
