@@ -4,7 +4,6 @@ let receiverUrl = getDataUrl.get("Kpd");
 let messageUrl = getDataUrl.get("Psn");
 let senderUrl = getDataUrl.get("Png");
 let copy = document.getElementById("copy");
-let baseUrl = document.getElementById("baseUrl");
 let make = document.getElementById("salin");
 
 //outputnya
@@ -20,8 +19,6 @@ if (receiverValue) {
 }
 
 function makeURL() {
-  baseUrl.value = "hallo" + getDataUrl;
-
   let receiverCopy = document.getElementsByClassName("receiverCopy")[0];
   let messageCopy = document.getElementsByClassName("messageCopy")[0];
   let senderCopy = document.getElementsByClassName("senderCopy")[0];
@@ -31,11 +28,9 @@ function makeURL() {
   senderCopy.value = document.getElementById("Png").value;
 }
 
-function salin() {
+function generateURL() {
   let baseUrl = document.getElementById("baseUrl");
-  baseUrl.value = "halo" + getDataUrl;
-  baseUrl.select();
-  document.execCommand("copy");
+  baseUrl.value = "https://btsadewa.github.io/iedmubarak/bismillah/index.html?" + getDataUrl;
 }
 copy.addEventListener("click", makeURL);
-make.addEventListener("click", salin);
+copy.addEventListener("click", generateURL);
