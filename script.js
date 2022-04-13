@@ -6,16 +6,21 @@ let senderUrl = getDataUrl.get("Png");
 let copy = document.getElementById("copy");
 let make = document.getElementById("salin");
 
-//outputnya
-let receiverValue = document.getElementsByClassName("receiverName")[0];
-if (receiverValue) {
-  receiverValue.innerHTML = receiverUrl;
+if (copy) {
+  copy.addEventListener("click", function () {
+    copy.classList.remove("salin");
+    makeURL();
+  });
+}
 
-  let messageValue = document.getElementsByClassName("receiverMessage")[0];
-  messageValue.innerHTML = messageUrl;
-
-  let senderValue = document.getElementsByClassName("receiverSend")[0];
-  senderValue.innerHTML = senderUrl;
+if (receiverUrl || senderUrl) {
+  if (messageUrl) {
+    // back page
+    if (copy) {
+      copy.innerHTML = "Salin link";
+      copy.classList.add("salin");
+    }
+  }
 }
 
 function makeURL() {
@@ -31,6 +36,24 @@ function makeURL() {
 function generateURL() {
   let baseUrl = document.getElementById("baseUrl");
   baseUrl.value = "https://btsadewa.github.io/iedmubarak/bismillah/index.html?" + getDataUrl;
+  salin();
+}
+
+function salin() {
+  let baseUrl = document.getElementById("baseUrl");
+  baseUrl.select();
+  document.execCommand("copy");
 }
 copy.addEventListener("click", makeURL);
 copy.addEventListener("click", generateURL);
+
+let receiverValue = document.getElementsByClassName("receiverName")[0];
+if (receiverValue) {
+  receiverValue.innerHTML = receiverUrl;
+
+  let messageValue = document.getElementsByClassName("receiverMessage")[0];
+  messageValue.innerHTML = messageUrl;
+
+  let senderValue = document.getElementsByClassName("receiverSend")[0];
+  senderValue.innerHTML = senderUrl;
+}

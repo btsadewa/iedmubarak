@@ -65,7 +65,7 @@ button:hover {
   background-color: #28ffbf;
 }
 
-button.copy.salin {
+.read {
   background-image: linear-gradient(rgb(52, 91, 197), rgb(19, 29, 122));
 }
 
