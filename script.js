@@ -13,16 +13,6 @@ if (copy) {
   });
 }
 
-if (receiverUrl || senderUrl) {
-  if (messageUrl) {
-    // back page
-    if (copy) {
-      copy.innerHTML = "Salin link";
-      copy.classList.add("read");
-    }
-  }
-}
-
 function makeURL() {
   let receiverCopy = document.getElementsByClassName("receiverCopy")[0];
   let messageCopy = document.getElementsByClassName("messageCopy")[0];
@@ -31,6 +21,16 @@ function makeURL() {
   receiverCopy.value = document.getElementById("Kpd").value;
   messageCopy.value = document.getElementById("Psn").value;
   senderCopy.value = document.getElementById("Png").value;
+}
+
+if (receiverUrl || senderUrl) {
+  if (messageUrl) {
+    // back page
+    if (copy) {
+      copy.innerHTML = "Salin link";
+      copy.classList.add("read");
+    }
+  }
 }
 
 if (document.getElementsByClassName("read")[0]) {
