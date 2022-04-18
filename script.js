@@ -50,7 +50,7 @@ function salin() {
   let baseUrl = document.getElementById("baseUrl");
   baseUrl.select();
   document.execCommand("copy");
-  alert("succes");
+  alert("Sukses, link telah tersalin");
 }
 // copy.addEventListener("click", generateURL);
 

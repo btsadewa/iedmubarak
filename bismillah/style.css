@@ -30,6 +30,7 @@
 
 body {
   padding: 5px;
+  background-color: #eee;
 }
 
 .greeting {
@@ -83,7 +84,8 @@ body {
   color: white;
   height: 200px;
   padding: 5px 40px;
-  overflow-x: auto;
+  box-sizing: border-box;
+  overflow-y: scroll;
   font-weight: 500;
   font-family: "poppins", "Times New Roman", Times, serif;
 }

@@ -11,6 +11,8 @@
 body {
   font-family: "poppin-reg", "Times New Roman", Times, serif !important;
   background-color: #eee !important;
+  max-height: 100vh !important;
+  color: #000 !important;
 }
 
 #control {
@@ -41,7 +43,7 @@ h1 {
 
 textarea,
 input {
-  border: 2px solid #39aea9;
+  border: 2px solid #ffcb74;
   border-radius: 5px;
   background: transparent;
 }
@@ -53,7 +55,7 @@ input.hidden {
 }
 
 button {
-  background-color: #77e4d4;
+  background-color: #ffcb74;
   border-radius: 5px !important;
   width: 150px;
   font-size: 14px !important;
@@ -62,16 +64,22 @@ button {
 }
 
 button:hover {
-  background-color: #28ffbf;
+  background-color: #f7f1ea;
 }
 
 .read {
-  background-color: #06ff00;
+  background-color: #6bcb77;
 }
 
 /* medium */
 @media screen and (max-width: 992px) {
   button {
     width: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .text {
+    font-size: 12px;
   }
 }
