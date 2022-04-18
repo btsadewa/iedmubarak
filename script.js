@@ -42,7 +42,7 @@ if (document.getElementsByClassName("read")[0]) {
 
 function generateURL() {
   let baseUrl = document.getElementById("baseUrl");
-  baseUrl.value = "https://btsadewa.github.io/iedmubarak/bismillah/index.html?" + getDataUrl;
+  baseUrl.value = "https://iedmubarak.netlify.app/bismillah/index.html?" + getDataUrl;
   salin();
 }
 
